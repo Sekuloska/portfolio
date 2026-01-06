@@ -5,8 +5,8 @@
   
   ### Software Engineer | Angular • C# • Jira
   
-  [![Live Demo](https://img.shields.io/badge/Live-Demo-4FD1C5?style=for-the-badge&logo=vercel)](https://your-portfolio-url.com)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/hristina-sekuloska)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-4FD1C5?style=for-the-badge&logo=vercel)](https://portfolio-hristina.netlify.app/)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/hristina-sekuloska/)
   [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/Sekuloska)
   
 </div>
