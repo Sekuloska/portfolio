@@ -1,0 +1,33 @@
+<section class="contact" id="contact">
+  <div class="contact__content">
+    <h2 class="contact__heading">Let’s Work Together</h2>
+    <p class="contact__subheading">
+      I'm currently open to new opportunities! Have a project in mind or just want to say hi? Feel free to reach out and let's make something great together.
+    </p>
+
+    <a [href]="mailtoLink" class="contact__primary-cta" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/email-original.svg" alt="Email Icon" class="contact__cta-icon" />
+      Send Me an Email
+    </a>
+
+    <p class="contact__connect-text">or connect with me online!</p>
+
+    <div class="contact__cards">
+      <ng-container *ngFor="let item of contactMethods">
+        <a
+          [href]="item.href"
+          [attr.target]="item.external ? '_blank' : null"
+          [attr.rel]="item.external ? 'noopener noreferrer' : null"
+          [attr.aria-label]="item.ariaLabel"
+          class="contact__card"
+        >
+          <div class="contact__card-icon-bubble">
+            <img [src]="'assets/images/' + item.icon + '-original.svg'" [alt]="item.title + ' Icon'" class="contact__card-icon" />
+          </div>
+          <p class="contact__card-title">{{ item.title }}</p>
+          <p class="contact__card-subtitle">{{ item.subtitle }}</p>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</section>

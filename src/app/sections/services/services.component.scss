@@ -1,0 +1,227 @@
+:host {
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+.services {
+  padding: 90px 0;
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  &::before {
+    width: 150px;
+    height: 150px;
+    top: 50px;
+    right: 50px;
+  }
+
+  &::after {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  &__heading-block {
+    text-align: center;
+    max-width: 720px;
+    margin: 0px auto 7px auto;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: var(--color-white);
+    border-radius: 22px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+    transition: all 0.3s ease; /* Changed to all for smoother transitions */
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.35;
+      filter: blur(18px);
+      z-index: -1;
+    }
+
+    &::before {
+      width: 120px;
+      height: 120px;
+      top: -30px;
+      left: -30px;
+    }
+
+    &::after {
+      width: 150px;
+      height: 150px;
+      bottom: -40px;
+      right: -40px;
+    }
+
+    &:hover {
+      transform: translateY(-10px); /* Lift effect */
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15); /* Stronger shadow */
+    }
+
+    &--angular {
+      transform: translateY(16px);
+      z-index: 1;
+
+      &::before {
+        background-color: #FFE5F0;
+      }
+      &::after {
+        background-color: #E5D4FF;
+      }
+
+      &:hover {
+        transform: translateY(16px - 10px); /* Base + hover lift */
+      }
+    }
+
+    &--csharp {
+      transform: translateY(-24px);
+      z-index: 2;
+
+      &::before {
+        background-color: #E5D4FF;
+      }
+      &::after {
+        background-color: #BEE3F8;
+      }
+
+      &:hover {
+        transform: translateY(-24px - 10px); /* Base + hover lift */
+      }
+    }
+
+    &--jira {
+      transform: translateY(16px);
+      z-index: 1;
+
+      &::before {
+        background-color: #4FD1C5;
+      }
+      &::after {
+        background-color: #BEE3F8;
+      }
+
+      &:hover {
+        transform: translateY(16px - 10px); /* Base + hover lift */
+      }
+    }
+
+    &-badge {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 16px auto;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+      }
+    }
+
+    &--angular &-badge {
+      background: linear-gradient(45deg, #dd0031, #c3002f);
+    }
+
+    &--csharp &-badge {
+      background: linear-gradient(45deg, #68217a, #521961);
+    }
+
+    &--jira &-badge {
+      background: linear-gradient(45deg, #0052cc, #0047b3);
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &-description {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 25px;
+    }
+
+    &__tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__tag {
+      background-color: #00CED1;
+      color: var(--color-text-primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500; /* Adjusted for a lighter appearance */
+      white-space: nowrap;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

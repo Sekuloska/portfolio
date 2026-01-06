@@ -1,0 +1,150 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* Changed from min-height to height */
+  /* Removed padding-top to resolve scroll issues and rely on flexbox centering */
+  overflow: hidden;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  background: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Removed background-image to make it fully white */
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Corner Circles */
+  &::after { /* Top-right circle */
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.5;
+    top: -100px;
+    right: -100px;
+    z-index: 0;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Removed padding to fix scroll */
+  }
+
+
+  .hero__portrait {
+    position: relative;
+    width: 520px;
+    height: 520px;
+    /* Removed border-radius from .hero__portrait */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 3rem;
+  }
+
+  .hero__arch {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    background: #CBD5E0;
+    border-radius: 999px 999px 40px 40px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .hero__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__name {
+    font-size: 4.5rem; /* ~72px */
+    font-weight: 900;
+    font-style: italic; /* Added italic style */
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__role {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #4A5568;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__skills {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #495057;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) { /* Tablet and smaller */
+    .hero__social {
+      display: none !important; /* Hide on tablet/mobile */
+    }
+
+    .hero__portrait {
+      width: 420px;
+      height: 420px;
+    }
+
+    .hero__arch {
+      width: 460px;
+      height: 460px;
+    }
+
+    .hero__name {
+      font-size: 3rem; /* ~48px */
+    }
+  }
+
+  @media (max-width: 767.98px) { /* Mobile */
+    padding-top: 100px; /* Add padding to prevent overlap with expanded navbar */
+    .hero__portrait {
+      width: 280px;
+      height: 280px;
+    }
+
+    .hero__arch {
+      width: 320px;
+      height: 320px;
+    }
+
+    .hero__name {
+      font-size: 2.25rem; /* ~36px */
+    }
+
+    .hero__role {
+      letter-spacing: 2px;
+    }
+
+    .hero__skills {
+      font-size: 1.1rem;
+    }
+  }
+}
+

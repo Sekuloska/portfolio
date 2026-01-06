@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Email icon">
+  <!-- Teal circle background -->
+  <circle cx="60" cy="60" r="52" fill="#4FD1C5"></circle>
+
+  <!-- Envelope (white) -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Envelope outer -->
+    <rect x="30" y="42" width="60" height="36" rx="8" ry="8" fill="none"></rect>
+    <!-- Flap lines -->
+    <path d="M32 46 L60 64 L88 46"></path>
+    <path d="M32 74 L54 60"></path>
+    <path d="M88 74 L66 60"></path>
+  </g>
+</svg>

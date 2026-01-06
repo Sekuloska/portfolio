@@ -1,0 +1,25 @@
+// Import custom variables
+@use "variables";
+
+// Import Bootstrap
+@use "bootstrap/scss/bootstrap" as *;
+
+// Base typography
+body {
+  background-color: variables.$bg;
+  color: variables.$ink;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.text-muted {
+  color: variables.$muted !important;
+}
+
+// Custom color classes
+.text-teal {
+  color: variables.$teal !important;
+}
+
+.bg-frame {
+  background-color: variables.$frame !important;
+}

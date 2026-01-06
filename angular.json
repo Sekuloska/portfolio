@@ -27,10 +27,19 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -88,7 +97,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
         }

@@ -1,0 +1,154 @@
+.contact {
+  position: relative;
+  background-color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+
+
+  &__content {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative; /* Ensure content is above the pseudo-element */
+    z-index: 1;
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 900;
+    color: #0F172A;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subheading {
+    font-size: 18px;
+    color: #64748B;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__primary-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: 56px;
+    padding: 0 30px;
+    background-color: #4FD1C5;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(77, 209, 197, 0.30);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #38B2AC; /* Slightly darker teal */
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(77, 209, 197, 0.40);
+    }
+
+    &:focus-visible {
+      outline: 3px solid #4FD1C5;
+      outline-offset: 3px;
+    }
+  }
+
+  &__cta-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &__connect-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #64748B;
+    font-size: 16px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px; /* Increased gap */
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    position: relative; /* For icon bubble positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px; /* Adjusted padding */
+    background-color: #fff;
+    border-radius: 16px; /* Updated border-radius */
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); /* Updated shadow */
+    text-decoration: none;
+    color: #0F172A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: min(200px, 100%); /* Min width 200px, responsive */
+    height: 170px; /* Set a fixed height */
+    margin-top: 32px; /* To offset the icon bubble */
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12); /* Intensified shadow */
+    }
+
+    @media (max-width: 768px) {
+      width: 80%; /* Make cards wider on mobile */
+    }
+  }
+
+  &__card-icon-bubble {
+    position: absolute;
+    top: -32px; /* Half of height to overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px; /* Increased size */
+    height: 64px; /* Increased size */
+    border-radius: 50%;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Floating shadow */
+    z-index: 2; /* Ensure it's above the card */
+  }
+
+  &__card-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__card-title {
+    font-size: 16px; /* Updated font-size */
+    font-weight: 600; /* Updated font-weight */
+    color: #0F172A;
+    margin-bottom: 5px;
+  }
+
+  &__card-subtitle {
+    font-size: 14px;
+    color: #64748B;
+  }
+}
