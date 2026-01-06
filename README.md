@@ -24,7 +24,7 @@ This portfolio serves as:
 - **Contact platform** for project inquiries and opportunities
 - **Personal brand** representation in the tech industry
 
----
+
 
 ## ✨ Features
 
@@ -53,7 +53,7 @@ Three service offerings presented in beautiful card layouts:
 - Large, friendly call-to-action button with pre-filled email
 - Direct links to LinkedIn, GitHub, and email
 
----
+
 
 ## 🛠️ Technologies
 
